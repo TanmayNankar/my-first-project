@@ -19,7 +19,7 @@ private static final Logger LOG = LoggerFactory.getLogger(EmployerService.class)
 @Autowired
 private EmployerRepository repository;
 
-public EmployerRegister findEmployeeByOrg(String org_name) {
+public EmployerRegister findEmployerByOrgName(String org_name) {
 	LOG.info(org_name);
 	return repository.findByOrgName();
 

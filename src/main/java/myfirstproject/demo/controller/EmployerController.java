@@ -23,14 +23,14 @@ public class EmployerController {
   private EmployerService service;
   
 
-  @RequestMapping("/org_name/{org_name}")
-  public EmployerRegister getEmployerByOrgName(@PathVariable("org_name") String org_name) {
+  @GetMapping("/org_name/{org_name}")
+  public EmployerRegister findEmployerByOrgName(@PathVariable("org_name") String org_name) {
 	  LOG.info("orgName");
-	return service.findEmployeeByOrg(org_name); 
+	return service.findEmployerByOrgName(org_name); 
 	  
   } 
 	
-  @RequestMapping("/eid")
+  @GetMapping("/eid")
   public EmployerRegister getEmployerById(@PathVariable("eid") int eid) {
 	 LOG.info("eid");
 	  return service.findEmployerById(101);
