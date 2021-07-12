@@ -18,9 +18,9 @@ import myfirstproject.demo.model.EmployerRegister;
 
 	public abstract List<EmployerRegister> findByOrgName(String org_name);
 
-	public abstract EmployerRegister findByOrgName();
+//	public abstract EmployerRegister findByOrgName();
 
-	public abstract EmployerRegister findEmployerById();
+//	public abstract EmployerRegister findEmployerById();
 		
 }
 

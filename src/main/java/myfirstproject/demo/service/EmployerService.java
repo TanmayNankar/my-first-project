@@ -1,6 +1,7 @@
 package myfirstproject.demo.service;
 
-//import java.util.*;
+
+import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,16 +20,19 @@ private static final Logger LOG = LoggerFactory.getLogger(EmployerService.class)
 @Autowired
 private EmployerRepository repository;
 
-public EmployerRegister findEmployerByOrgName(String org_name) {
+
+//get employer by org name
+public List<EmployerRegister> findEmployerByOrgName(String org_name) {
 	LOG.info(org_name);
-	return repository.findByOrgName();
+	return repository.findByOrgName(org_name);
 
 }
 
-public EmployerRegister findEmployerById(int eid) {
-	LOG.info("eid");
-	return repository.findEmployerById();
-}
+// get employer by id 
+//public EmployerRegister findEmployerById(int eid) {
+//	LOG.info("eid");
+//	return repository.findEmployerById(eid);
+//}
 
 }
 

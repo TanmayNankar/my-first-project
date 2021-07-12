@@ -1,13 +1,14 @@
 package myfirstproject.demo.controller;
 
-import java.util.*;
+
+
+import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import myfirstproject.demo.model.EmployerRegister;
@@ -24,18 +25,18 @@ public class EmployerController {
   
 
   @GetMapping("/org_name/{org_name}")
-  public EmployerRegister findEmployerByOrgName(@PathVariable("org_name") String org_name) {
+  public List<EmployerRegister> findEmployerByOrgName(@PathVariable("org_name") String org_name) {
 	  LOG.info("orgName");
 	return service.findEmployerByOrgName(org_name); 
 	  
   } 
 	
-  @GetMapping("/eid")
-  public EmployerRegister getEmployerById(@PathVariable("eid") int eid) {
-	 LOG.info("eid");
-	  return service.findEmployerById(101);
-	  
-  }
+//  @GetMapping("/eid")
+//  public EmployerRegister getEmployerById(@PathVariable("eid") int eid) {
+//	 LOG.info("eid");
+//	  return service.findEmployerById(101);
+//	  
+//  }
   
   
 }
